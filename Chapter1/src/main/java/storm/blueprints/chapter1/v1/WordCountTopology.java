@@ -24,6 +24,7 @@ public class WordCountTopology {
         WordCountBolt countBolt = new WordCountBolt();
         ReportBolt reportBolt = new ReportBolt();
         TopologyBuilder builder = new TopologyBuilder();
+
         builder.setSpout(SENTENCE_SPOUT_ID, spout);
         // SentenceSpout --> SplitSentenceBolt
         builder.setBolt(SPLIT_BOLT_ID, splitBolt).shuffleGrouping(SENTENCE_SPOUT_ID);
