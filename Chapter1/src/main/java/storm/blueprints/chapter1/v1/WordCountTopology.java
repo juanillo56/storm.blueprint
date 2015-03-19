@@ -1,8 +1,10 @@
 package storm.blueprints.chapter1.v1;
 
+import storm.blueprints.utils.Utils;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
+import backtype.storm.tuple.Fields;
 
 public class WordCountTopology {
 
@@ -36,4 +38,10 @@ public class WordCountTopology {
         cluster.killTopology(TOPOLOGY_NAME);
         cluster.shutdown();
     }
+
+    private static void waitForSeconds(final int seconds) {
+        Utils.waitForSeconds(seconds);
+
+    }
+
 }

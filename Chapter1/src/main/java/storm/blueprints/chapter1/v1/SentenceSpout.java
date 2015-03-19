@@ -2,13 +2,13 @@ package storm.blueprints.chapter1.v1;
 
 import java.util.Map;
 
+import storm.blueprints.utils.Utils;
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichSpout;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
-import backtype.storm.utils.Utils;
 
 public class SentenceSpout extends BaseRichSpout {
 
